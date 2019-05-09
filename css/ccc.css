@@ -1,0 +1,120 @@
+
+@font-face {
+font-family: "h4";
+src: url("font/nom/Prompt-LightItalic.ttf");
+}
+@font-face {
+font-family: "Ba";
+src: url("font/nom/DroidSerif-Italic.ttff");
+}
+@font-face {
+font-family: "nom";
+src: url("font/nom/BungeeInline-Regular.ttf");
+}
+
+
+html{
+	
+	
+	
+margin-left: 300px;
+padding: 0;	
+	
+	font-family:calibri,Tahoma,sans-serif;
+	width: 770px;
+
+}
+h1 {
+    font-size:2.5em;
+    text-align:center;
+   
+    color:#270808;
+    text-transform:uppercase;
+    line-height:1em;
+    margin-top: 0px;
+    	padding-left: 80px;
+font-family: nom;
+   color:#D8CFCF;
+   
+  }
+  h2{
+  	font-family: ba;
+  	color:white;
+  	font-style: italic;
+  }
+  img{
+  	border-radius: 50%;
+  	margin: 0px;
+  	margin-left: 50px;
+  	
+
+  
+  }
+header
+{
+	height: 170px;
+	width: 100%;
+	background: #4878A1;
+}
+img,h1,small{
+	display: inline;
+
+}
+#apropos{
+	background: #667384;
+	margin-top: 0px;
+	padding-top: 5px;
+	padding-left: 15px;
+	padding-bottom: 15px;
+	width: 98%;
+}
+h4{
+	 text-transform:uppercase;
+	 font-family: h4;
+	 color:#923535;
+}
+small{
+	float: right;
+	font-style: italic;
+	font-family: sans-serif;
+	font-weight: bold;
+}
+.gras{
+	font-weight: bold;
+}
+.vl {
+  border-left: solid #244D67;
+  height: 150px;
+  width: 4px;
+
+  padding-right: 50px;
+}
+#contact,#formation{
+	display: inline-table;
+
+
+}
+
+#formation,#centre{
+	width:300px;
+}
+
+#contact{
+padding-right: 50px;
+width: 300px;
+}
+input{
+	border-radius: 50%;
+	border:1px solid black;
+}
+.lg{
+	padding-left: 100px;
+}
+#competence,#centre{
+	display: inline-table;
+}
+#competence{
+padding-right: 50px;
+width: 300px;
+}
+

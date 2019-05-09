@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Créer Votre CV</title>
+	<link rel="stylesheet" type="text/css" href="bootstrp/css/bootstrap.min.css">
+  <meta charset="utf-8">
+<link rel="shortcut icon" href="icone/cv.png" type="image/x-icon"/>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	
+	<style type="text/css">
+		html {
+  scroll-behavior: smooth;
+ 
+}
+
+		form{
+			width: 500px;
+			height: auto;
+			margin-left: 410px;
+			margin-top: 60px;
+      
+  
+		}
+
+		
+		#b2
+		{
+			float: right;
+
+		}
+
+		#b1
+		{
+			display: none;
+		}
+		#b3,#b4{
+			display: none;
+			float: right;
+
+		}
+		#ff2
+		{
+			display: none;
+
+		}
+		#ff3{
+			display: none;
+
+		}
+		#ff4{
+			display: none;
+		}
+
+   #b4{
+    float: right;
+
+
+   }
+   .erreur{
+    color:red;
+    display: none;
+   }
+   
+#plus,#plus1,#plus2{
+  float: right;
+  cursor: pointer;
+}
+#rl,#re{
+  display: none;
+
+}
+
+		
+
+	</style>
+	<script type="text/javascript">
+
+	
+  
+       
+    
+		function suiv1()
+		{
+			
+			 var exptel=/^\+[0-9]{8,}$/;
+       var expnom=/^[a-z]{3,}$/i;
+       var expmail=/^[a-z0-9._-]+@[a-z]{2,10}\.[a-z]{2,7}$/i;
+       var expann=/^([0-9]{4})?$/;//si l'utilisateur n'a pas aucune formation on a fermer l'expression réguilière par ? 
+       var dip_exp=/^([a-z0-9áàâäãåçéèêëíìîïñóòôöõúùûü ]{10,})?$/i;
+     
+      
+
+       
+if (expnom.test(document.f.nom.value)==false) {
+   document.f.nom.focus();
+document.getElementById('nom').style.display='block';
+document.f.nom.style.border='1px solid red';
+   return false;
+
+}
+if (expnom.test(document.f.prenom.value)==false) {
+   document.f.prenom.focus();
+document.getElementById('prenom').style.display='block';
+document.f.prenom.style.border='1px solid red';
+   return false;
+
+}
+if (document.f.apropos.value==""||document.f.apropos.value.length<20) {
+   document.f.apropos.focus();
+document.getElementById('apropos').style.display='block';
+document.f.apropos.style.border='1px solid red';
+   return false;
+
+}
+if (document.f.date_nais.value=="") {
+
+   document.f.date_nais.focus();
+document.getElementById('date').style.display='block';
+document.f.Date_nais.style.border='1px solid red';
+   return false;
+}
+if (expmail.test(document.f.addmail.value)==false) {
+
+   document.f.addmail.focus();
+document.getElementById('mail').style.display='block';
+document.f.addmail.style.border='1px solid red';
+   return false;
+}
+if (document.f.add.value=="") {
+
+   document.f.add.focus();
+document.getElementById('add').style.display='block';
+document.f.add.style.border='1px solid red';
+   return false;
+}
+
+
+      if(exptel.test(document.f.tel.value)==false)
+      {
+        document.f.tel.focus();
+      
+    document.getElementById('tel').style.display='block';
+document.f.tel.style.border='1px solid red';
+   return false;
+      }
+      if (document.f.photo.value.length==0) {
+        document.f.photo.focus();
+      
+    document.getElementById('ph').style.display='block';
+document.f.photo.style.border='1px solid red';
+   return false;
+
+      }
+      ///////////////////////////////////////////////////////////////////////
+      if (expann.test(document.f.ann1.value)==false) {
+        document.f.ann1.focus();
+      
+    document.getElementById('a1').style.display='block';
+document.f.ann1.style.border='1px solid red';
+   return false;
+      }
+        
+
+        if (dip_exp.test(document.f.et1.value)==false ) {
+          document.f.et1.focus();
+      
+    document.getElementById('d1').style.display='block';
+document.f.et1.style.border='1px solid red';
+
+   return false;
+        }
+          
+
+
+          if (expann.test(document.f.ann2.value)==false) {
+            document.f.ann2.focus();
+      
+    document.getElementById('a2').style.display='block';
+document.f.ann2.style.border='1px solid red';
+   return false;}
+            if (dip_exp.test(document.f.et2.value)==false) {
+               document.f.et2.focus();
+      
+    document.getElementById('d2').style.display='block';
+document.f.et2.style.border='1px solid red';
+   return false;
+            }
+             
+
+
+             if (expann.test(document.f.ann3.value)==false) {
+              document.f.ann3.focus();
+      
+    document.getElementById('a3').style.display='block';
+document.f.ann3.style.border='1px solid red';
+   return false;
+             }
+              if (dip_exp.test(document.f.et3.value)==false ) {
+                 document.f.et3.focus();
+      
+    document.getElementById('d3').style.display='block';
+document.f.et3.style.border='1px solid red';
+   return false;
+              }
+
+               if (expann.test(document.f.ann4.value)==false) {
+        document.f.ann4.focus();
+      
+    document.getElementById('a4').style.display='block';
+document.f.ann4.style.border='1px solid red';
+   return false;
+      }
+        
+
+        if (dip_exp.test(document.f.et4.value)==false ) {
+          document.f.et4.focus();
+      
+    document.getElementById('d4').style.display='block';
+document.f.et4.style.border='1px solid red';
+
+   return false;
+        }
+          
+
+
+
+           if (expann.test(document.f.ann5.value)==false) {
+        document.f.ann5.focus();
+      
+    document.getElementById('a5').style.display='block';
+document.f.ann5.style.border='1px solid red';
+   return false;
+      }
+        
+
+        if (dip_exp.test(document.f.et5.value)==false ) {
+          document.f.et5.focus();
+      
+    document.getElementById('d5').style.display='block';
+document.f.et5.style.border='1px solid red';
+
+   return false;
+        }
+          
+
+		
+		document.getElementById("ff2").style.display="block";
+		document.getElementById("ff3").style.display="block";
+		 window.scrollTo(0, 1050);
+		 document.getElementById("b3").style.display="block";
+		 document.getElementById('b2').style.display="none";
+		
+		 
+
+		
+	}
+	function suiv2()
+	{
+
+var anne_debut_fin=/^([0-9]{4}\-[0-9]{4})?$/;//si l'utilisateur n'a pas aucune experience on a fermer l'expression réguilière par ? 
+    var exp=/^([a-z0-9áàâäãåçéèêëíìîïñóòôöõúùûü ]{10,})?$/i;
+
+var lg=/^([a-z]+)?$/i;//si l'utilisateur n'a pas aucune langue on a fermer l'expression réguilière par ? 
+
+
+
+
+
+     if (anne_debut_fin.test(document.f.aan1.value)==false) {
+        document.f.aan1.focus();
+      
+    document.getElementById('aa1').style.display='block';
+document.f.aan1.style.border='1px solid red';
+   return false;
+      }
+        
+
+        if (exp.test(document.f.en1.value)==false) {
+          document.f.en1.focus();
+      
+    document.getElementById('e1').style.display='block';
+document.f.en1.style.border='1px solid red';
+   return false;
+        }
+          
+
+
+          if (anne_debut_fin.test(document.f.aan2.value)==false) {
+            document.f.ann2.focus();
+      
+    document.getElementById('aa2').style.display='block';
+document.f.aan2.style.border='1px solid red';
+   return false;
+ }
+            if (exp.test(document.f.en2.value)==false) {
+               document.f.en2.focus();
+      
+    document.getElementById('e2').style.display='block';
+document.f.en2.style.border='1px solid red';
+   return false;
+            }
+             
+
+
+             if (anne_debut_fin.test(document.f.aan3.value)==false) {
+              document.f.aan3.focus();
+      
+    document.getElementById('aa3').style.display='block';
+document.f.aan3.style.border='1px solid red';
+   return false;
+             }
+              if (exp.test(document.f.en3.value)==false) {
+                 document.f.en3.focus();
+      
+    document.getElementById('e3').style.display='block';
+document.f.en3.style.border='1px solid red';
+   return false;
+              }
+
+
+               if (anne_debut_fin.test(document.f.aan4.value)==false) {
+            document.f.ann4.focus();
+      
+    document.getElementById('aa2').style.display='block';
+document.f.aan4.style.border='1px solid red';
+   return false;
+ }
+            if (exp.test(document.f.en4.value)==false) {
+               document.f.en4.focus();
+      
+    document.getElementById('e4').style.display='block';
+document.f.en4.style.border='1px solid red';
+   return false;
+            }
+
+
+
+
+             if (anne_debut_fin.test(document.f.aan5.value)==false) {
+            document.f.ann5.focus();
+      
+    document.getElementById('aa5').style.display='block';
+document.f.aan5.style.border='1px solid red';
+   return false;
+ }
+            if (exp.test(document.f.en5.value)==false) {
+               document.f.en5.focus();
+      
+    document.getElementById('e5').style.display='block';
+document.f.en5.style.border='1px solid red';
+   return false;
+            }
+////////////////////////////////////////////////////////////////////////////////////////
+if (lg.test(document.f.lg1.value)==false) {
+                 document.f.lg1.focus();
+      
+    document.getElementById('lg1').style.display='block';
+document.f.lg1.style.border='1px solid red';
+   return false;
+              }
+
+              if (lg.test(document.f.lg2.value)==false) {
+                 document.f.lg2.focus();
+      
+    document.getElementById('lg2').style.display='block';
+document.f.lg2.style.border='1px solid red';
+   return false;
+              }
+
+
+
+              if (lg.test(document.f.lg3.value)==false) {
+                 document.f.lg3.focus();
+      
+    document.getElementById('lg3').style.display='block';
+document.f.lg3.style.border='1px solid red';
+   return false;
+              }
+              if (lg.test(document.f.lg4.value)==false) {
+                 document.f.lg4.focus();
+      
+    document.getElementById('lg4').style.display='block';
+document.f.lg4.style.border='1px solid red';
+   return false;
+              }
+
+              if (lg.test(document.f.lg5.value)==false) {
+                 document.f.lg5.focus();
+      
+    document.getElementById('lg5').style.display='block';
+document.f.lg5.style.border='1px solid red';
+   return false;
+              }
+
+
+
+
+		document.getElementById("ff4").style.display="block";
+		 window.scrollTo(0, document.body.scrollHeight);
+		 document.getElementById("b3").style.display="none";
+		 document.getElementById('b4').style.display="block";
+		  document.getElementById('b1').style.display="block";
+
+			
+
+
+		}
+  
+    function affiche()
+    {
+      alert("J'espère que mon travail vous plait");
+    }
+    setTimeout(affiche,6000);
+	
+	
+	</script>
+		
+</head>
+<body >
+  
+  <form name="f" enctype="multipart/form-data" action="generer_cv.php" method="POST" >
+	<div id="ff">
+	<fieldset>
+		<legend>Information Personnel</legend>
+	
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputName">Nom </label>
+       <input type="text" class="form-control" placeholder="Taper Votre Nom"   minlength="3" maxlength="10" name="nom" onkeypress="this.style.border='1px solid #ced4da'; document.getElementById('nom').style.display='none';">
+       <small id="nom" class="erreur">Nom Invalide</small>
+       
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputName">Prénom</label>
+       <input type="text" class="form-control" placeholder="Taper Votre Prénom"   minlength="3" maxlength="10" name="prenom"onkeypress="this.style.border='1px solid #ced4da'; document.getElementById('prenom').style.display='none';">
+       <small id="prenom" class="erreur">prenom invalide</small>
+    </div>
+  </div>
+
+<div class="md-form">
+  <div class="form-group">
+  <label for="exampleFormControlTextarea2">A propos De Moi</label>
+  <textarea class="form-control rounded-0" name="apropos"   maxlength="200"  placeholder="Ecrivez quelques choses aprops de toi"onkeypress="this.style.border='1px solid #ced4da'; document.getElementById('apropos').style.display='none';"></textarea>
+  <small id="apropos" class="erreur">Taper quelques choses apropos de toi(min 20 caractères)</small>
+</div>
+   <div class="form-group">
+    <label for="Date_nais">Date De Naissance</label>
+    <input type="date" class="form-control" id="Date"  placeholder="Taper Votre Date de naissance"  name="date_nais" onkeypress="this.style.border='1px solid #ced4da'; document.getElementById('date').style.display='none';">
+    <small id="date" class="erreur">Entrer Votre Date De naissance</small>
+
+    
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Adresse E-mail</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Taper Votre Adresse E-mail"  name="addmail" onkeypress="this.style.border='1px solid #ced4da'; document.getElementById('mail').style.display='none';">
+    <small id="mail" class="erreur">L'adresse e-mail doit sous la forme user@nom_messagerie.domaine</small>
+
+    
+  </div>
+  <div class="form-group">
+    <label for="inputAddress">Address</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="Votre Adresse Local"  minlength="3" maxlength="20" name="add" onkeypress="this.style.border='1px solid #ced4da'; document.getElementById('add').style.display='none';">
+    <small id="add" class="erreur">Taper votre correcte adresse STP</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Téléphone</label>
+    <input type="text" class="form-control"  placeholder="Taper Votre Téléphone"  minlength="8"  maxlength="20"  name="tel" onkeypress="this.style.border='1px solid #ced4da'; document.getElementById('tel').style.display='none';">
+    <small id="tel" class="erreur">Le numéro de téléphone doit etre sous la forme +code du pays et le reste de numéro </small>
+    
+  </div>
+  <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text">Ajouter Une Photo</span>
+
+  </div>
+  <div class="custom-file">
+    <input type="file" class="custom-file-input" id="inputGroupFile01"  name="photo" onblur="this.style.border='1px solid #ced4da'; document.getElementById('ph').style.display='none';">
+    <label class="custom-file-label" for="inputGroupFile01"></label>
+   
+  </div>
+
+   
+ </div>
+ <small id="ph" class="erreur">Veuillez saisir une photo</small>
+
+  
+    
+  
+  </fieldset>
+   </div>
+
+ 
+
+
+<div id="ff1">
+<fieldset>
+		<legend>Formation</legend>
+
+  <div class="form-row">
+    <div class="form-group col-md-2">
+      <label>Année</label>
+      <input type="text" class="form-control" placeholder="1900"   minlength="4" maxlength="4" name="ann1" id="ann1" oninvalid="Exp 2017-2018" onkeypress="this.style.border='1px solid #ced4da'; document.getElementById('a1').style.display='none';">
+      <small id="a1" class="erreur">Taper une année correcte</small>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputName">diplomes et Université</label>
+       <input type="text" class="form-control" placeholder="diplomes et Université"   minlength="3" maxlength="30" name="et1" onkeypress="this.style.border='1px solid #ced4da'; document.getElementById('d1').style.display='none';">
+       <small id="d1" class="erreur">Veuillez saisir votre diplome ansi que votre université (min 10 caractères)</small>
+    </div>
+  </div>
+
+   <div class="form-row">
+    <div class="form-group col-md-2">
+      <label>Année</label>
+      <input type="text" class="form-control" placeholder="2000"   minlength="4" maxlength="4"  name="ann2" onkeypress="this.style.border='1px solid #ced4da'; document.getElementById('a2').style.display='none';">
+      <small id="a2" class="erreur">Taper une année correcte</small>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputName">diplomes et Université</label>
+       <input type="text" class="form-control" placeholder="diplomes et Université"   minlength="3" maxlength="30" name="et2" onkeypress="this.style.border='1px solid #ced4da'; document.getElementById('d2').style.display='none';">
+       <small id="d2" class="erreur">Veuillez saisir votre diplome ansi que votre université  (min 10 caractères)</small>
+    </div>
+  </div>
+
+ <div class="form-row">
+    <div class="form-group col-md-2">
+      <label>Année</label>
+      <input type="text" class="form-control" placeholder="2001"   minlength="4" maxlength="4"  name="ann3" onkeypress="this.style.border='1px solid #ced4da'; document.getElementById('a3').style.display='none';">
+      <small id="a3" class="erreur">Taper une année correcte</small>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputName">diplomes et Université</label>
+       <input type="text" class="form-control" placeholder="diplomes et Université"   minlength="3" maxlength="30"name="et3" onkeypress="this.style.border='1px solid #ced4da'; document.getElementById('d3').style.display='none';">
+       <small id="d3" class="erreur">Veuillez saisir votre diplome ansi que votre université  (min 10 caractères)</small>
+              <img src="icone/plus.png" width="20px" height="20px" id="plus" onclick="document.getElementById('rf').style.display='block'; document.getElementById('plus').style.display='none'; window.scrollTo(0, document.body.scrollHeight); document.f.ann4.focus();">
+
+    </div>
+  </div>
+  <div id="rf" style="display: none;">
+   <div class="form-row" ">
+    <div class="form-group col-md-2">
+      <label>Année</label>
+      <input type="text" class="form-control" placeholder="2001"   minlength="4" maxlength="4"  name="ann4" onkeypress="this.style.border='1px solid #ced4da'; document.getElementById('a4').style.display='none';">
+      <small id="a4" class="erreur">Taper une année correcte</small>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputName">diplomes et Université</label>
+       <input type="text" class="form-control" placeholder="diplomes et Université"   minlength="3" maxlength="30"name="et4" onkeypress="this.style.border='1px solid #ced4da'; document.getElementById('d4').style.display='none';">
+       
+       <small id="d4" class="erreur">Veuillez saisir votre diplome ansi que votre université  (min 10 caractères)</small>
+    </div>
+  </div>
+  <div class="form-row" ">
+    <div class="form-group col-md-2">
+      <label>Année</label>
+      <input type="text" class="form-control" placeholder="2001"   minlength="4" maxlength="4"  name="ann5" onkeypress="this.style.border='1px solid #ced4da'; document.getElementById('a5').style.display='none';">
+      <small id="a5" class="erreur">Taper une année correcte</small>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputName">diplomes et Université</label>
+       <input type="text" class="form-control" placeholder="diplomes et Université"   minlength="3" maxlength="30"name="et5" onkeypress="this.style.border='1px solid #ced4da'; document.getElementById('d5').style.display='none';">
+       
+       <small id="d5" class="erreur">Veuillez saisir votre diplome ansi que votre université  (min 10 caractères)</small>
+    </div>
+  </div>
+  </div>
+
+</fieldset>
+</div>
+
+
+<div id="ff2">
+<fieldset>
+		<legend>Experience professionnelles</legend>
+
+  <div class="form-row">
+    <div class="form-group col-md-2">
+      <label>Années</label>
+      <input type="text" class="form-control" placeholder="1900-2019"  minlength="9" maxlength="9" name="aan1" onkeypress="this.style.border='1px solid #ced4da'; document.getElementById('aa1').style.display='none';">
+      <small id="aa1" class="erreur">Veuillez saisir l'année de début-l'année de la fin</small>
+    </div>
+    <div class="form-group col-md-6">
+      <label >A propos de cette experience</label>
+       <input type="text" class="form-control" placeholder="Entreprise & Votre poste "   minlength="10" maxlength="100" name="en1" onkeypress="this.style.border='1px solid #ced4da'; document.getElementById('e1').style.display='none';">
+       <small id="e1" class="erreur">Taper quelques choses apropos de cette experience</small>
+    </div>
+  </div>
+
+   <div class="form-row">
+    <div class="form-group col-md-2">
+      <label>Années</label>
+      <input type="text" class="form-control" placeholder="1900-2019"  minlength="9" maxlength="9" name="aan2" onkeypress="this.style.border='1px solid #ced4da'; document.getElementById('aa2').style.display='none';">
+      <small id="aa2" class="erreur">Veuillez saisir l'année de début-l'année de la fin</small>
+    </div>
+    <div class="form-group col-md-6">
+      <label >A propos de cette experience</label>
+       <input type="text" class="form-control" placeholder="Entreprise & Votre poste "   minlength="10" maxlength="100" name="en2" onkeypress="this.style.border='1px solid #ced4da'; document.getElementById('e2').style.display='none';">
+       <small id="e2" class="erreur">Taper quelques choses apropos de cette experience</small>
+    </div>
+  </div>
+
+ <div class="form-row">
+    <div class="form-group col-md-2">
+      <label>Années</label>
+      <input type="text" class="form-control" placeholder="1900-2019"  minlength="9" maxlength="9" name="aan3" onkeypress="this.style.border='1px solid #ced4da'; document.getElementById('aa3').style.display='none';">
+      <small id="aa3" class="erreur">Veuillez saisir l'année de début-l'année de la fin</small>
+    </div>
+    <div class="form-group col-md-6">
+      <label >A propos de cette experience</label>
+       <input type="text" class="form-control" placeholder="Entreprise & Votre poste "   minlength="10" maxlength="100" name="en3" onkeypress="this.style.border='1px solid #ced4da'; document.getElementById('e3').style.display='none';">
+       <small id="e3" class="erreur">Taper quelques choses apropos de cette experience</small>
+        <img src="icone/plus.png" width="20px" height="20px" id="plus1" onclick="document.getElementById('re').style.display='block'; document.getElementById('plus1').style.display='none'; document.f.aan4.focus();">
+    </div>
+  </div>
+  <div id="re">
+    <div class="form-row">
+    <div class="form-group col-md-2">
+      <label>Années</label>
+      <input type="text" class="form-control" placeholder="1900-2019"  minlength="9" maxlength="9" name="aan4" onkeypress="this.style.border='1px solid #ced4da'; document.getElementById('aa4').style.display='none';">
+      <small id="aa4" class="erreur">Veuillez saisir l'année de début-l'année de la fin</small>
+    </div>
+    <div class="form-group col-md-6">
+      <label >A propos de cette experience</label>
+       <input type="text" class="form-control" placeholder="Entreprise & Votre poste "   minlength="10" maxlength="100" name="en4" onkeypress="this.style.border='1px solid #ced4da'; document.getElementById('e4').style.display='none';">
+       <small id="e4" class="erreur">Taper quelques choses apropos de cette experience</small>
+    </div>
+  </div>
+
+
+  <div class="form-row">
+    <div class="form-group col-md-2">
+      <label>Années</label>
+      <input type="text" class="form-control" placeholder="1900-2019"  minlength="9" maxlength="9" name="aan5" onkeypress="this.style.border='1px solid #ced4da'; document.getElementById('aa5').style.display='none';">
+      <small id="aa5" class="erreur">Veuillez saisir l'année de début-l'année de la fin</small>
+    </div>
+    <div class="form-group col-md-6">
+      <label >A propos de cette experience</label>
+       <input type="text" class="form-control" placeholder="Entreprise & Votre poste "   minlength="10" maxlength="100" name="en5" onkeypress="this.style.border='1px solid #ced4da'; document.getElementById('e5').style.display='none';">
+       <small id="e5" class="erreur">Taper quelques choses apropos de cette experience</small>
+    </div>
+  </div>
+  </div>
+
+  </fieldset>
+  </div>
+  <div id="ff3">
+<fieldset>
+		<legend>Langue Etrangères</legend>
+
+  <div class="form-row">
+    <div class="form-group col-md-4">
+      <label>Langue</label>
+      <input type="text" class="form-control" placeholder="Anglais"  minlength="3" maxlength="20" name="lg1"  onkeypress="this.style.border='1px solid #ced4da'; document.getElementById('lg1').style.display='none';">
+      <small id="lg1" class="erreur">Nom du langue peut etre invalide</small>
+    </div>
+    <div class="form-group col-md-4">
+      <label >Connaissance</label>
+      <input type="range" min="0" max="100" step="0" name="c1">
+    </div>
+  </div>
+
+   <div class="form-row">
+    <div class="form-group col-md-4">
+      <label>Langue</label>
+      <input type="text" class="form-control" placeholder="Anglais"   minlength="3" maxlength="20"  name="lg2" onkeypress="this.style.border='1px solid #ced4da'; document.getElementById('lg2').style.display='none';">
+      <small id="lg2" class="erreur">Nom du langue peut etre invalide</small>
+    </div>
+    <div class="form-group col-md-4">
+      <label >Connaissance</label>
+       <input type="range" min="0" max="100" step="0" name="c2">
+    </div>
+  </div>
+
+ <div class="form-row">
+    <div class="form-group col-md-4">
+      <label>Langue</label>
+      <input type="text" class="form-control" placeholder="Anglais"   minlength="3" maxlength="20"  name="lg3" onkeypress="this.style.border='1px solid #ced4da'; document.getElementById('lg3').style.display='none';">
+      <small id="lg3" class="erreur">Nom du langue peut etre invalide</small>
+    </div>
+    <div class="form-group col-md-4">
+      <label >Connaissance</label>
+       <input type="range" min="0" max="100" step="0" name="c3" id="c3">
+        <img src="icone/plus.png" width="20px" height="20px" id="plus2" onclick="document.getElementById('rl').style.display='block'; document.getElementById('plus2').style.display='none';  window.scrollTo(0, document.body.scrollHeight); document.f.lg4.focus();">
+
+    </div>
+  </div>
+     
+
+
+<div id="rl">
+  <div class="form-row">
+    <div class="form-group col-md-4">
+      <label>Langue</label>
+      <input type="text" class="form-control" placeholder="Anglais"   minlength="3" maxlength="20"  name="lg4" onkeypress="this.style.border='1px solid #ced4da'; document.getElementById('lg4').style.display='none';">
+      <small id="lg2" class="erreur">Nom du langue peut etre invalide</small>
+    </div>
+    <div class="form-group col-md-4">
+      <label >Connaissance</label>
+       <input type="range" min="0" max="100" step="0" name="c4">
+    </div>
+  </div>
+
+
+  <div class="form-row">
+    <div class="form-group col-md-4">
+      <label>Langue</label>
+      <input type="text" class="form-control" placeholder="Anglais"   minlength="3" maxlength="20"  name="lg5" onkeypress="this.style.border='1px solid #ced4da'; document.getElementById('lg5').style.display='none';">
+      <small id="lg5" class="erreur">Nom du langue peut etre invalide</small>
+    </div>
+    <div class="form-group col-md-4">
+      <label >Connaissance</label>
+       <input type="range" min="0" max="100" step="0" name="c5">
+    </div>
+  </div>
+  
+</div>
+  </fieldset>
+  </div>
+   <div id="ff4">
+<fieldset>
+		<legend>Compétances Informatique Et Centre D'interet</legend>
+
+  <div class="form-group">
+
+      <label><h5>Compétances Informatique</h5></label>
+      <div class="custom-control custom-checkbox">
+  <input type="checkbox" class="custom-control-input" id="customCheck1" value="HTML5 & CSS3 & JAVASCRIPT" name="cp[]">
+  <label class="custom-control-label" for="customCheck1">HTML5 & CSS3 & JAVASCRIPT</label></div>
+   <div class="custom-control custom-checkbox">
+  <input type="checkbox" class="custom-control-input" id="customCheck2" value="AJAX & JQUERY"  name="cp[]">
+  <label class="custom-control-label" for="customCheck2">AJAX & JQUERY</label></div>
+   <div class="custom-control custom-checkbox">
+  <input type="checkbox" class="custom-control-input" id="customCheck3" value="C & c++"  name="cp[]">
+  <label class="custom-control-label" for="customCheck3">C & c++</label></div>
+   <div class="custom-control custom-checkbox">
+  <input type="checkbox" class="custom-control-input" id="customCheck4" value="PHP7 & MYSQL"  name="cp[]">
+  <label class="custom-control-label" for="customCheck4">PHP7 & MYSQL</label></div>
+   <div class="custom-control custom-checkbox">
+  <input type="checkbox" class="custom-control-input" id="customCheck5" value="JAVA"  name="cp[]">
+  <label class="custom-control-label" for="customCheck5">JAVA</label></div>
+   <div class="custom-control custom-checkbox">
+  <input type="checkbox" class="custom-control-input" id="customCheck6" value="WORD & EXCEL"  name="cp[]">
+  <label class="custom-control-label" for="customCheck6">WORD & EXCEL</label></div>
+  <div class="form-row">
+    <div class="form-group col-md-4">
+      <label>Autre</label>
+      <input type="text" class="form-control" placeholder name="autre">
+    </div>
+</div>
+<label><h5>Centre D'interet</h5></label>
+
+    <div class="form-group ">
+      <label></label>
+      <input type="text" class="form-control" placeholder="Sport,Msique...."   name="centre">
+   
+</div>
+    
+</div>
+
+  </fieldset>
+  </div>
+<div id="bt">
+  <button type="button" id="b4" class="btn btn-secondary" onclick="window.scrollTo(0, 0);" ><img src="icone/top.png" width="20px;" height="20px;"></img></button>
+<center> <button type="submit" id="b1" class="btn btn-primary" >Générer Votre CV</button></center>
+<center> <button type="button" id="b2" class="btn btn-secondary" onclick="suiv1()" ><img src="icone/down.png" width="20px;" height="20px;"></img></button></center>
+<center> <button type="button" id="b3" class="btn btn-secondary" onclick="suiv2()"><img src="icone/down.png" width="20px;" height="20px;"></img></button></center>
+ 
+
+
+</div>
+</form>
+
+</body>
+</html>
